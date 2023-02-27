@@ -7,7 +7,10 @@
  * @param  {FunctionSettings} settings
  */
 async function onTrack(event, settings) {
-	const endpoint = `https://api.us-east.tinybird.co/v0/events?name=${encodeURIComponent(
+	// const endpoint = `https://api.us-east.tinybird.co/v0/events?name=${encodeURIComponent(
+	// 	settings.tableName
+	// )}`;
+	const endpoint = `https://segmenttinybirdcloudflareworker.tangia.workers.dev?name=${encodeURIComponent(
 		settings.tableName
 	)}`;
 	let response;
@@ -39,7 +42,10 @@ async function onTrack(event, settings) {
 }
 
 async function onBatch(events, settings) {
-	const endpoint = `https://api.us-east.tinybird.co/v0/events?name=${encodeURIComponent(
+	// const endpoint = `https://api.us-east.tinybird.co/v0/events?name=${encodeURIComponent(
+	// 	settings.tableName
+	// )}`;
+	const endpoint = `https://segmenttinybirdcloudflareworker.tangia.workers.dev?name=${encodeURIComponent(
 		settings.tableName
 	)}`;
 	let response;
